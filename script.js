@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return numberString;
     }
+    
     generateButton.addEventListener('click', function () {
         const digits = parseInt(slider.value, 10);
         const randomNumber = generateRandomNumber(digits);

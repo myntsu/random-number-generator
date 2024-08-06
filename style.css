@@ -1,0 +1,16 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+
+    color: hsl(0 0% 91%);
+    background-color: hsl(0 0% 8%);
+    font-family: monospace;
+}
