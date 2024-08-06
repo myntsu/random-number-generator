@@ -11,20 +11,27 @@
         <h1>Random number generator</h1>
         <section id="selection">
             <div class="range-selection">
-                <label for="digitSlider">3-digits</label>
+                <label for="digitSlider">3</label>
                 <input type="range" id="digitSlider" min="3" max="10" value="3" data-slider-number>
-                <label for="digitSlider">10-digits</label>    
+                <label for="digitSlider">10</label>    
+                <p><span id="digitDisplay">3</span></p>
             </div>
-            <p>Number of Digits: <span id="digitDisplay">3</span></p>
             <button data-generate-results>Generate</button>
         </section>
         <section id="result">
             <div>
-                <p data-result>---</p>
+                <p data-result></p>
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M9 18q-.825 0-1.412-.587T7 16V4q0-.825.588-1.412T9 2h9q.825 0 1.413.588T20 4v12q0 .825-.587 1.413T18 18zm-4 4q-.825 0-1.412-.587T3 20V6h2v14h11v2z"/></svg>
+                </button>
             </div>
         </section>
+
     </main>
     
+    <dialog data-toast>
+        Copied to clipboard
+    </dialog>
     <script src="script.js"></script>
 </body>
 </html>
