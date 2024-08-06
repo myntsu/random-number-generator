@@ -10,6 +10,8 @@ body {
     display: grid;
     place-content: center;
 
+    margin: 0;
+
     color: hsl(0 0% 91%);
     background-color: hsl(0 0% 8%);
     font-family: monospace;
@@ -17,6 +19,10 @@ body {
 
 p {
     margin: 0;
+}
+
+input {
+    cursor: pointer;
 }
 
 svg {
@@ -70,6 +76,13 @@ svg {
 
 #selection > button:is(:hover, :focus-visible) {
     background-color: hsl(220 80% 50% / .7);
+    transition: background-color 150ms ease-in;
+}
+
+#selection > button:is(:active) {
+    scale: .95;
+    color: hsl(0 0% 91%);
+    background-color: hsl(220 80% 50%);
 }
 
 #result > div {
@@ -101,12 +114,36 @@ svg {
     padding: 0 .6rem;
     color: currentColor;
     background-color: transparent;
-    border: 1px solid hsl(0 0% 91% / .2);
+    border: 2px solid hsl(0 0% 91% / .2);
     border-radius: .25rem;
     cursor: pointer;
 }
 
 #result > div > button:is(:hover, :focus-visible) {
-    color: hsl(0 0% 8%);
-    background-color: hsl(0 0% 91%);
+    color: hsl(0 0% 91%);
+    background-color: hsl(220 80% 50%);
+    transition: background-color 150ms ease-in;
+}
+
+#result > div > button:is(:active) {
+    scale: .9;
+    border: 2px solid hsl(220 80% 50%);
+}
+
+dialog[data-toast] {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease, bottom 0.3s ease;
+}
+dialog[data-toast].show {
+    opacity: 1;
+    bottom: 40px;
 }
