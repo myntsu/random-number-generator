@@ -8,15 +8,19 @@
 <body>
     <main>
         <h1>Obtain a random number</h1>
-        <section>
-            <button>3-digits</button>
-            <button>4-digits</button>
-            <button>5-digits</button>
-            <button>6-digits</button>
-            <button>7-digits</button>
-            <button>8-digits</button>
-            <button>9-digits</button>
-            <button>10-digits</button>
+        <section id="selection">
+            <div class="range-selection">
+                <label for="digitSlider">3-digits</label>
+                <input type="range" id="digitSlider" min="3" max="10" value="3" data-slider-number>
+                <label for="digitSlider">10-digits</label>    
+            </div>
+            <p>Number of Digits: <span id="digitDisplay">3</span></p>
+            <button data-generate-results>Generate</button>
+        </section>
+        <section id="result">
+            <div>
+                <p data-result>---</p>
+            </div>
         </section>
     </main>
     
